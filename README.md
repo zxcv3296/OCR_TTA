@@ -12,7 +12,8 @@ ocr_tta/
 ├── dataset.py                    # 데이터셋/Collate 유틸
 ├── final_charlist_1770.txt       # 문자셋 파일(줄당 1문자)
 ├── model.py                      # 모델 정의 (TPS/Backbone/Sequence/Prediction)
-├── run.sh                        # 실행 스크립트(예시)
+├── run_sh.sh                     # train 스크립트(예시)
+├── run_eval.sh                     # eval 스크립트(예시)
 ├── test.py                       # validation() 구현
 ├── train9_onnx.py                # 학습 + ONNX export 메인 스크립트
 └── utils.py                      # 라벨 컨버터/유틸
@@ -76,6 +77,7 @@ python3 -W ignore train9_onnx.py   --exp_name        .   --train_data      /home
 - **model.py** — TPS(선택) → FeatureExtraction(VGG/RCNN/ResNet) → BiLSTM(선택) → Prediction(CTC/Attn) 구조.  
 - **utils.py** — 라벨 컨버터(CTC/Attn), 평균기 등 유틸.  
 - **test.py** — `validation(...)` 구현(손실/정확도/NED/추론시간).  
-- **run.sh** — 실행 예시 스크립트(GPU/옵션).  
+- **run_sh.sh** — 실행(train) 예시 스크립트(GPU/옵션).
+- **run_eval.sh** — 실행(eval) 예시 스크립트(GPU/옵션).  
 - **data_lmdb_08/** — LMDB 루트(`train/custom`, `val`에 `data.mdb/lock.mdb`).  
 - **final_charlist_1770.txt** — 기본 문자셋(줄당 1문자). 학습 시 LMDB 문자와 합쳐 사용.
