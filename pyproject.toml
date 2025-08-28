@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ocr"
+version = "0.1.0"
+description = ""
+authors = ["Sangh0 <sangho@snuailab.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"
+fastapi = "^0.116.1"
+uvicorn = "<0.35.0"
+onnx = "^1.19.0"
+pillow = "^11.3.0"
+python-multipart = "^0.0.20"
+torch = "^2.8.0"
+onnxruntime-gpu = "^1.22.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
