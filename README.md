@@ -72,7 +72,7 @@ python3 -W ignore train9_onnx.py   --exp_name        .   --train_data      /home
 ##    파일별 설명 (요약)
 
 - **train9_onnx.py** — 학습/검증 드라이버. 주기적 평가, 최고 성능 시 `.pth`/`.onnx` 저장, 문자셋 자동 보강.
-- **trai팅하신 코드입니다.
+- **train9_onnx_ft.py** — 위 코드와 유사하지만 교수님께서 추가로 피팅하신 코드.
 - **dataset.py** — LMDB 로더·배치 밸런싱·전처리(`AlignCollate`).  
 - **model.py** — TPS(선택) → FeatureExtraction(VGG/RCNN/ResNet) → BiLSTM(선택) → Prediction(CTC/Attn) 구조.  
 - **utils.py** — 라벨 컨버터(CTC/Attn), 평균기 등 유틸.  
